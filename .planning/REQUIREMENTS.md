@@ -3,6 +3,8 @@
 **Defined:** 2026-06-14
 **Core Value:** Keep a healthy, continuously-quoted two-sided market on MWG/USDC (real maker volume) without blowing up inventory or capital.
 
+**Total v1 requirements:** 39
+
 ## v1 Requirements
 
 Requirements for the initial release. Each maps to a roadmap phase.
@@ -102,16 +104,52 @@ Explicitly excluded to prevent scope creep.
 
 ## Traceability
 
-Populated during roadmap creation.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (to be mapped by roadmap) | — | Pending |
+| FND-01 | Phase 1 | Pending |
+| FND-02 | Phase 1 | Pending |
+| FND-03 | Phase 1 | Pending |
+| FND-04 | Phase 1 | Pending |
+| FND-05 | Phase 1 | Pending |
+| CON-01 | Phase 2 | Pending |
+| CON-02 | Phase 2 | Pending |
+| CON-03 | Phase 2 | Pending |
+| MKT-01 | Phase 3 | Pending |
+| MKT-02 | Phase 3 | Pending |
+| MKT-03 | Phase 3 | Pending |
+| MKT-04 | Phase 3 | Pending |
+| MKT-05 | Phase 3 | Pending |
+| QTE-01 | Phase 4 | Pending |
+| QTE-02 | Phase 4 | Pending |
+| QTE-04 | Phase 4 | Pending |
+| ORD-01 | Phase 4 | Pending |
+| ORD-04 | Phase 4 | Pending |
+| ORD-02 | Phase 5 | Pending |
+| ORD-03 | Phase 5 | Pending |
+| PNL-01 | Phase 6 | Pending |
+| PNL-02 | Phase 6 | Pending |
+| PNL-03 | Phase 6 | Pending |
+| QTE-03 | Phase 6 | Pending |
+| RSK-01 | Phase 7 | Pending |
+| RSK-02 | Phase 7 | Pending |
+| RSK-03 | Phase 7 | Pending |
+| RSK-04 | Phase 7 | Pending |
+| RSK-05 | Phase 7 | Pending |
+| TGM-01 | Phase 8 | Pending |
+| TGM-02 | Phase 8 | Pending |
+| TGM-03 | Phase 8 | Pending |
+| TGM-04 | Phase 8 | Pending |
+| TGM-05 | Phase 8 | Pending |
+| AIG-01 | Phase 9 | Pending |
+| AIG-02 | Phase 9 | Pending |
+| OPS-01 | Phase 10 | Pending |
+| OPS-02 | Phase 10 | Pending |
+| OPS-03 | Phase 10 | Pending |
 
 **Coverage:**
-- v1 requirements: 35 total
-- Mapped to phases: TBD
-- Unmapped: TBD
+- v1 requirements: 39 total
+- Mapped to phases: 39
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-06-14*
