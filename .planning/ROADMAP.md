@@ -8,16 +8,16 @@
 
 ---
 
-### Phase 1: Project Foundation & Config
+### Phase 1: Project Foundation & Config ✓ COMPLETE (2026-06-14)
 **Goal:** A runnable Python service skeleton with typed config, safe secret handling, a testnet/mainnet network switch, and structured logging.
 **Mode:** mvp
 **Requirements:** FND-01, FND-02, FND-03, FND-04, FND-05
 **Depends on:** —
 **Success Criteria:**
-1. Service starts via a documented command and loads typed config + `.env` with conservative defaults
-2. Missing/invalid secrets cause a clear startup failure; `.env` is gitignored and keys are never logged
-3. The active network (testnet/mainnet) is logged prominently on startup from a single switch
-4. Every significant event writes a structured log line
+1. ✓ Service starts via a documented command and loads typed config + `.env` with conservative defaults
+2. ✓ Missing/invalid secrets cause a clear startup failure; `.env` is gitignored and keys are never logged
+3. ✓ The active network (testnet/mainnet) is logged prominently on startup from a single switch
+4. ✓ Every significant event writes a structured log line
 
 ### Phase 2: Connectivity & API Agent Auth
 **Goal:** An authenticated Hyperliquid connection on testnet using a dedicated bot wallet and a named, persistent API Agent (trade-only).

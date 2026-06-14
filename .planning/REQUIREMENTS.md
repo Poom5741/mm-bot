@@ -11,11 +11,11 @@ Requirements for the initial release. Each maps to a roadmap phase.
 
 ### Foundation
 
-- [ ] **FND-01**: Project runs as a Python 3.11+ service with pinned dependencies (`requirements.txt`) and a documented setup
-- [ ] **FND-02**: All parameters (target pair, tick offset, order size, interval, risk caps, network) load from typed config + `.env`, with conservative safe defaults
-- [ ] **FND-03**: Secrets (agent key) load only from environment/secret store; `.env` is gitignored and keys are never logged
-- [ ] **FND-04**: A single `NETWORK` switch selects testnet vs mainnet endpoints and logs the active network prominently on startup
-- [ ] **FND-05**: Structured logging writes an auditable trail of every order, fill, and cancel
+- [x] **FND-01**: Project runs as a Python 3.11+ service with pinned dependencies (`requirements.txt`) and a documented setup *(Phase 1 — 2026-06-14)*
+- [x] **FND-02**: All parameters (target pair, tick offset, order size, interval, risk caps, network) load from typed config + `.env`, with conservative safe defaults *(Phase 1 — 2026-06-14)*
+- [x] **FND-03**: Secrets (agent key) load only from environment/secret store; `.env` is gitignored and keys are never logged *(Phase 1 — 2026-06-14)*
+- [x] **FND-04**: A single `NETWORK` switch selects testnet vs mainnet endpoints and logs the active network prominently on startup *(Phase 1 — 2026-06-14)*
+- [x] **FND-05**: Structured logging writes an auditable trail of every order, fill, and cancel *(Phase 1 — 2026-06-14)*
 
 ### Connectivity & Auth
 
