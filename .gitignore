@@ -1,0 +1,28 @@
+# Secrets — never commit
+.env
+.env.local
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Package build artifacts
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+.venv
+
+# Logs
+*.log
+
+# Test and type checker caches
+.pytest_cache/
+.mypy_cache/
+
+# Database files
+*.sqlite
+*.db
