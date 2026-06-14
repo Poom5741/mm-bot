@@ -2,19 +2,19 @@
 
 ## Project
 
-**Hyperliquid MWG/USDC Volume Market-Maker Bot**
+**Hyperliquid MGW/USDC Volume Market-Maker Bot**
 
-An AI-assisted market-making bot that continuously places two-sided limit (maker) orders on the Hyperliquid **spot** pair **MWG/USDC** to generate trading volume and support the market health of MWG (the owner's own project token). It runs as a long-running service on a VPS, is controlled via a Telegram bot, and uses a deterministic rule-based quoting core with an AI guardrail layer for volatility adaptation, auto-pausing, and reporting.
+An AI-assisted market-making bot that continuously places two-sided limit (maker) orders on the Hyperliquid **spot** pair **MGW/USDC** to generate trading volume and support the market health of MGW (the owner's own project token). It runs as a long-running service on a VPS, is controlled via a Telegram bot, and uses a deterministic rule-based quoting core with an AI guardrail layer for volatility adaptation, auto-pausing, and reporting.
 
-**Core Value:** The bot keeps a healthy, continuously-quoted two-sided market on MWG/USDC (real maker orders that generate genuine volume) **without blowing up inventory or capital** — volume with disciplined risk control is the one thing that must work.
+**Core Value:** The bot keeps a healthy, continuously-quoted two-sided market on MGW/USDC (real maker orders that generate genuine volume) **without blowing up inventory or capital** — volume with disciplined risk control is the one thing that must work.
 
 ### Constraints
 
 - **Tech stack**: Python — Hyperliquid has an official, well-documented Python SDK; AI/LLM and Telegram libraries are mature in Python.
-- **Market**: Hyperliquid spot, pair MWG/USDC — set by the owner; tick/lot sizes are dictated by the exchange and must be fetched at runtime.
+- **Market**: Hyperliquid spot, pair MGW/USDC — set by the owner; tick/lot sizes are dictated by the exchange and must be fetched at runtime.
 - **Security**: Dedicated bot wallet + API Agent delegation; secrets only via env vars / secret store — non-negotiable to protect funds.
 - **Rate limits**: Hyperliquid enforces API rate limits — quoting loop must throttle (sleep / backoff) to avoid bans.
-- **Environment**: Testnet-first for validation; MWG likely exists only on mainnet, so loop logic is proven on testnet then pointed at mainnet MWG/USDC.
+- **Environment**: Testnet-first for validation; MGW likely exists only on mainnet, so loop logic is proven on testnet then pointed at mainnet MGW/USDC.
 - **Deployment**: VPS, long-running resilient process with logging and auto-restart.
 - **Risk**: Spot inventory (no liquidation) but real price exposure — hard inventory and capital caps plus a kill-switch are required.
 
@@ -51,7 +51,7 @@ An AI-assisted market-making bot that continuously places two-sided limit (maker
 - **Order book:** `info.l2_snapshot(coin)` → `bids`/`asks` with `[px, sz]`.
 - **Spot balances:** `info.spot_user_state(address)["balances"]` → `{coin, hold, total}`.
 - **Spot metadata:** `info.spot_meta()` → `tokens[]` (with `name`, `index`, `szDecimals`, `weiDecimals`) and `universe[]` (pairs with `name`, `index`, `tokens:[baseIdx, quoteIdx]`).
-- **API Agent:** `approve_result, agent_key = main_exchange.approve_agent(name="mwg-bot")`; then `Exchange(agent_wallet, URL, account_address=main_wallet.address)`. Agent can trade but **cannot withdraw/transfer**. Use a **named** agent for persistence (unnamed/temporary agents expire).
+- **API Agent:** `approve_result, agent_key = main_exchange.approve_agent(name="mgw-bot")`; then `Exchange(agent_wallet, URL, account_address=main_wallet.address)`. Agent can trade but **cannot withdraw/transfer**. Use a **named** agent for persistence (unnamed/temporary agents expire).
 
 ## Do NOT use
 

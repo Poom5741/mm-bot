@@ -1,4 +1,4 @@
-# Research: Stack — Hyperliquid MWG/USDC Market-Maker
+# Research: Stack — Hyperliquid MGW/USDC Market-Maker
 
 **Domain:** Algorithmic spot market-making bot on Hyperliquid DEX, Python, AI-assisted, Telegram-controlled, VPS-deployed.
 **Confidence:** High on core SDK (verified against live API + official docs); Medium on AI-layer choices (design-dependent).
@@ -30,7 +30,7 @@
 - **Order book:** `info.l2_snapshot(coin)` → `bids`/`asks` with `[px, sz]`.
 - **Spot balances:** `info.spot_user_state(address)["balances"]` → `{coin, hold, total}`.
 - **Spot metadata:** `info.spot_meta()` → `tokens[]` (with `name`, `index`, `szDecimals`, `weiDecimals`) and `universe[]` (pairs with `name`, `index`, `tokens:[baseIdx, quoteIdx]`).
-- **API Agent:** `approve_result, agent_key = main_exchange.approve_agent(name="mwg-bot")`; then `Exchange(agent_wallet, URL, account_address=main_wallet.address)`. Agent can trade but **cannot withdraw/transfer**. Use a **named** agent for persistence (unnamed/temporary agents expire).
+- **API Agent:** `approve_result, agent_key = main_exchange.approve_agent(name="mgw-bot")`; then `Exchange(agent_wallet, URL, account_address=main_wallet.address)`. Agent can trade but **cannot withdraw/transfer**. Use a **named** agent for persistence (unnamed/temporary agents expire).
 
 ## Do NOT use
 

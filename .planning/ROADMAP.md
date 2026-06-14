@@ -1,10 +1,10 @@
-# Roadmap: Hyperliquid MWG/USDC Volume Market-Maker Bot
+# Roadmap: Hyperliquid MGW/USDC Volume Market-Maker Bot
 
 **Created:** 2026-06-14
 **Mode:** Vertical MVP (each phase delivers a working end-to-end capability)
-**Core Value:** Keep a healthy, continuously-quoted two-sided market on MWG/USDC (real maker volume) without blowing up inventory or capital.
+**Core Value:** Keep a healthy, continuously-quoted two-sided market on MGW/USDC (real maker volume) without blowing up inventory or capital.
 
-> ⚠️ **MWG is not yet listed on Hyperliquid** (verified absent on mainnet spot, perps, and testnet). All phases develop and validate against an existing pair (default `PURR/USDC` on testnet) with the target pair fully configurable. Going live on `MWG/USDC` is a config flip once MWG is listed via HIP-1 (the listing itself is out of scope — see REQUIREMENTS.md).
+> ⚠️ **MGW is not yet listed on Hyperliquid** (verified absent on mainnet spot, perps, and testnet). All phases develop and validate against an existing pair (default `PURR/USDC` on testnet) with the target pair fully configurable. Going live on `MGW/USDC` is a config flip once MGW is listed via HIP-1 (the listing itself is out of scope — see REQUIREMENTS.md).
 
 ---
 
@@ -36,7 +36,7 @@
 **Depends on:** Phase 2
 **Success Criteria:**
 1. Pair metadata (index/name, size decimals, price precision, min size) resolves at startup
-2. Bot fails gracefully with a clear message if the configured pair is unlisted (e.g. MWG)
+2. Bot fails gracefully with a clear message if the configured pair is unlisted (e.g. MGW)
 3. Best bid/ask, mid, and a rolling volatility estimate are computed from live L2 data
 4. Price/size rounding to exchange precision is centralized and unit-tested
 
@@ -119,7 +119,7 @@
 
 ## Post-v1 (gated, not scheduled)
 
-- **Mainnet MWG cutover** — flip `NETWORK=mainnet` + target pair to `MWG/USDC` with tiny size and tight caps. **Blocked on MWG being listed on Hyperliquid (HIP-1).**
+- **Mainnet MGW cutover** — flip `NETWORK=mainnet` + target pair to `MGW/USDC` with tiny size and tight caps. **Blocked on MGW being listed on Hyperliquid (HIP-1).**
 - See REQUIREMENTS.md v2 for multi-pair, dashboard, backtesting, and advanced fair-value model.
 
 ---

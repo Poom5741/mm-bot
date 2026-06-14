@@ -1,4 +1,4 @@
-# Research: Architecture — Hyperliquid MWG/USDC Market-Maker
+# Research: Architecture — Hyperliquid MGW/USDC Market-Maker
 
 ## Component Map
 
@@ -65,4 +65,4 @@ market data → volatility/mid → (AI advice) → desired quotes → risk gate 
 8. **Telegram control + reporting.**
 9. **AI guardrail layer.**
 10. **Packaging + VPS deploy (Docker/systemd) + ops/runbook.**
-11. **Mainnet cutover for MWG/USDC** (gated on MWG listing).
+11. **Mainnet cutover for MGW/USDC** (gated on MGW listing).

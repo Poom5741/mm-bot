@@ -1,7 +1,7 @@
-# Requirements: Hyperliquid MWG/USDC Volume Market-Maker Bot
+# Requirements: Hyperliquid MGW/USDC Volume Market-Maker Bot
 
 **Defined:** 2026-06-14
-**Core Value:** Keep a healthy, continuously-quoted two-sided market on MWG/USDC (real maker volume) without blowing up inventory or capital.
+**Core Value:** Keep a healthy, continuously-quoted two-sided market on MGW/USDC (real maker volume) without blowing up inventory or capital.
 
 **Total v1 requirements:** 39
 
@@ -26,7 +26,7 @@ Requirements for the initial release. Each maps to a roadmap phase.
 ### Market Data & Metadata
 
 - [ ] **MKT-01**: Bot resolves the configured pair's metadata (asset index/name, size decimals, price precision, min size) at startup
-- [ ] **MKT-02**: Bot fails gracefully with a clear message if the configured pair is not listed (e.g. MWG not yet on Hyperliquid)
+- [ ] **MKT-02**: Bot fails gracefully with a clear message if the configured pair is not listed (e.g. MGW not yet on Hyperliquid)
 - [ ] **MKT-03**: Bot reads the live L2 order book and computes best bid/ask and mid price
 - [ ] **MKT-04**: Bot computes a rolling volatility estimate from recent prices
 - [ ] **MKT-05**: All prices and sizes are rounded to exchange-valid precision before any order is sent
@@ -55,7 +55,7 @@ Requirements for the initial release. Each maps to a roadmap phase.
 
 ### Inventory & PnL
 
-- [ ] **PNL-01**: Bot tracks MWG and USDC balances and net exposure
+- [ ] **PNL-01**: Bot tracks MGW and USDC balances and net exposure
 - [ ] **PNL-02**: Bot computes realized and unrealized PnL (unrealized marked at mid), including fees
 - [ ] **PNL-03**: Bot persists state (orders, fills, PnL) so it survives restarts, and periodically reconciles against on-chain balances
 
@@ -99,7 +99,7 @@ Explicitly excluded to prevent scope creep.
 | Self-trading / wash trading | Blocked by Hyperliquid; volume must be real fills |
 | Withdrawal/transfer ability in the bot | Agent wallet is trade-only by design |
 | Multi-exchange / CEX support | Hyperliquid-only for v1 |
-| Listing MWG on Hyperliquid (HIP-1 auction) | Prerequisite owned by the team, outside the bot |
+| Listing MGW on Hyperliquid (HIP-1 auction) | Prerequisite owned by the team, outside the bot |
 | Guaranteed-profit / alpha strategies | Target is volume near break-even, not alpha |
 
 ## Traceability

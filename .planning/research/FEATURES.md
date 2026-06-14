@@ -1,4 +1,4 @@
-# Research: Features — Hyperliquid MWG/USDC Market-Maker
+# Research: Features — Hyperliquid MGW/USDC Market-Maker
 
 Categorized for a spot volume/market-making bot. Table stakes = must-have or the bot is unsafe/useless. Differentiators = adaptive edge. Anti-features = deliberately excluded.
 
@@ -11,7 +11,7 @@ Categorized for a spot volume/market-making bot. Table stakes = must-have or the
 | Read L2 order book | Best bid/ask/mid; depth for sanity checks | S |
 | Place two-sided maker limit orders (ALO) | Buy and sell ~N ticks off market; post-only | M |
 | Order lifecycle management | Track resting oids, cancel-and-replace stale quotes, cancel-all on stop/crash | M |
-| Inventory tracking | MWG + USDC balances; net exposure vs caps | M |
+| Inventory tracking | MGW + USDC balances; net exposure vs caps | M |
 | PnL accounting | Realized + unrealized (mark = mid); fees included | M |
 | Risk controls | Max inventory cap, max capital deployed, min/max spread, kill-switch on adverse move/volatility | L |
 | Rate-limit safety | Throttle/backoff, batch orders, avoid API ban | M |
@@ -29,7 +29,7 @@ Categorized for a spot volume/market-making bot. Table stakes = must-have or the
 | Inventory skew quoting | Skew quotes to mean-revert inventory toward target (helps break-even) | M |
 | AI guardrail layer | LLM classifies market regime / sanity-checks actions / writes plain-language reports | M |
 | Telegram control & reporting | start/stop, set size/spread/pair, status, PnL, alerts | M |
-| Multi-pair support | Quote several pairs from one process (post-MWG) | L |
+| Multi-pair support | Quote several pairs from one process (post-MGW) | L |
 
 ## Anti-Features (deliberately NOT built)
 
@@ -44,4 +44,4 @@ Categorized for a spot volume/market-making bot. Table stakes = must-have or the
 
 ## Hard dependency / sequencing note
 
-⚠️ **MWG is not yet listed on Hyperliquid (verified absent on mainnet spot, perps, and testnet).** Listing a spot token requires the **HIP-1** deployment (Dutch auction) — a prerequisite owned outside this bot. Therefore: build & validate against an existing pair (e.g. `PURR/USDC`), keep the target market fully configurable, and the bot must **fail gracefully** if the configured pair is not found.
+⚠️ **MGW is not yet listed on Hyperliquid (verified absent on mainnet spot, perps, and testnet).** Listing a spot token requires the **HIP-1** deployment (Dutch auction) — a prerequisite owned outside this bot. Therefore: build & validate against an existing pair (e.g. `PURR/USDC`), keep the target market fully configurable, and the bot must **fail gracefully** if the configured pair is not found.
